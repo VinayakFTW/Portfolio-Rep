@@ -1,0 +1,34 @@
+.link-buttons{
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.upper-navbar{
+    background-color: burlywood;
+}
+.main-content{
+    background-color: gray;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+body,
+html,
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM290ZDk5b3Y2bjQ3Mm80NGtsMGx5N2J0ZHplcGM5eTRnb2dtNTAxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fq8HxnZAkoTybqirPN/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
