@@ -1,34 +1,51 @@
 .link-buttons{
     width: 150px;
     height: 50px;
-    background-color: aquamarine;
+    background-color:white;
+    
+    
 }
 
 .upper-navbar{
-    background-color: burlywood;
+    background-color: black;
+    position:relative;
+    margin:-1.5vh;
+
 }
+
+.name{
+    color: white;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2%;
+    
+}
+
+.button-core{
+    text-align: center;
+}
+
+.about-img{
+    height: auto;
+    width: auto;
+}
+
+.about-img-desc{
+    font-size: 0.9vw;
+}
+
+
 .main-content{
     background-color: gray;
+    font-size: 1vw;
 }
-
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 body,
 html,
 main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM290ZDk5b3Y2bjQ3Mm80NGtsMGx5N2J0ZHplcGM5eTRnb2dtNTAxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fq8HxnZAkoTybqirPN/giphy.gif");
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHg1aDlic3R0NW1ibGlrMHBlYmU1MTd1Z21ucjA4YWViM2hlY2RsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fw8uZriJW4TlhmZnUj/giphy.gif");
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
