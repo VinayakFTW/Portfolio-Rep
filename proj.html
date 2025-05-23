@@ -7,34 +7,52 @@
 </head>
 <body>
     <header class="upper-navbar">
-        <h1>Vinayak Varshney</h1>
+        <h1 class="name-index">Vinayak Varshney</h1>
         <nav>
-            <h2 class="button-core">
-                <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="index.html">Home</a>
-                </button>
-                <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="contact.html">Contact</a>
-                </button>
-                <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="about.html">About</a>
-                </button>
-            </h2>
-         <hr>
-    </header>
-        <main class="main-content">
-        <div style="text-align: center;">
-            <h2 style="color: white;">Projects</h2>
-            <h3 style="color: white;"><p>Here are some of the projects I have worked on:</p></h3>
-            <ul>
-                <button class="link-buttons" style="border: 2px dashed; border-radius: 30px">
-                    <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant">PULSE.AI-voice assistant</a>
-                </button>
-                <button class="link-buttons" style="border: 2px dashed; border-radius: 30px">
-                    <a href="https://github.com/VinayakFTW/Basic_Image_Proccessing-numpy_and_matplotlib">Basic Image proccessing</a>
-                </button>
+            <div class="button-core">
+                <div class="button-container">
+                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
+                        <a class = "btn-text" href="index.html">Home</a>
+                    </button>
+                    <!-- <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
+                        <a class = "btn-text" href="contact.html">Contact</a>
+                    </button> -->
+                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
+                        <a class = "btn-text" href="about.html">About</a>
+                    </button>
+                </div>
             </div>
+         </nav>
+        <hr>
+    </header>
+    <main class="projects-content">
+        <section class="projects-list-section">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I have worked on:</p>
+            <div class="project-items-container">
+                <div class="project-item">
+                    <h3>PULSE.AI - Voice Assistant</h3>
+                    <p>A voice-controlled assistant built with Python.</p>
+                    <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant" class="btn-grad project-link" target="_blank">View on Github</a>
+                </div>
+                <div class="project-item">
+                    <h3>Basic Image Processing</h3>
+                    <p>Exploring fundamental image processing techniques using NumPy and Matplotlib.</p>
+                    <a href="https://github.com/VinayakFTW/Basic_Image_Proccessing-numpy_and_matplotlib" class="btn-grad project-link" target="_blank">View on Github</a>
+                </div>
+                <div class="project-item">
+                    <h3>CO2 Emission Prediction</h3>
+                    <p>Predicting CO2 emissions of various vehicles using regression.</p>
+                    <a href="https://github.com/VinayakFTW/CO2_Emission_Prediction" class="btn-grad project-link" target="_blank">View on Github</a>
+                </div>
+                <div class="project-item">
+                    <h3>Billing System</h3>
+                    <p>A simple Billing system made using C.</p>
+                    <a href="https://github.com/VinayakFTW/Billing_System" class="btn-grad project-link" target="_blank">View on Github</a>
+                </div>
                 
-        </main>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
