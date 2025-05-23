@@ -1,62 +1,171 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Vinayak Varshney - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-transition"></div>
+    
+    <div class="stars-container">
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 10%; left: 20%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 15%; left: 50%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 25%; left: 80%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 30%; left: 10%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 35%; left: 40%; opacity: 0.8; animation: star-float 4s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 40%; left: 70%; opacity: 0.8; animation: star-float 9s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 50%; left: 30%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 55%; left: 60%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 60%; left: 90%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 65%; left: 15%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+    </div>
+    
     <header class="upper-navbar">
         <h1 class="name-index">Vinayak Varshney</h1>
         <nav>
             <div class="button-core"> 
                 <div class="button-container">
-                
-                <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="proj.html">Projects</a>
-                </button>
-                <!-- <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="contact.html">Contact</a>
-                </button> -->
-                <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                    <a class = "btn-text" href="about.html">About</a>
-                </button>
-            </div> 
-        </div>
-        
-    </header>
-    <main class="home-content" style="width:100vw;color:white">
-        <div style="align-self: flex-start;">
-            <img src="assets//images//me.jpg" style="width: 20vw;">
-            <div style="align-self: flex-start;">
-                <h2>
-                    <p>
-                        <span id="intro"> Hi, I am Vinayak Varshney
-                        <br>
-                        A student of Artificial Intelligence and Machine Learning
-                        <br>
-                        I am Currently a First Year in Symbiosis Institute Of Technology Pune Pursuing my B.Tech
-                        <br>
-                        I did my 12th grade from Delhi Public School Vasant Kunj
-                        </span>
-                    </p>
-                    </h2>
-                    
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="#home"><i class="fas fa-home"></i> <span>Home</span></a>
+                    </button>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="#skills"><i class="fas fa-laptop-code"></i> <span>Skills</span></a>
+                    </button>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="#timeline"><i class="fas fa-graduation-cap"></i> <span>Education</span></a>
+                    </button>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="proj.html"><i class="fas fa-code"></i> <span>Projects</span></a>
+                    </button>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="about.html"><i class="fas fa-user"></i> <span>About</span></a>
+                    </button>
+                </div> 
             </div>
-        </div>
-        <div style="align-self: center;">
-        <main class="contact-content">
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="home-content">
+            <div class="profile-section">
+                <img src="assets/images/me.jpg" alt="Vinayak Varshney" class="profile-image">
+                <div class="intro-text">
+                    <div id="intro">
+                        <h2>Hi, I am Vinayak Varshney</h2>
+                        <div class="intro-lines">
+                            <div class="typing-container">
+                                <span id="typing-text" class="typing-text"></span>
+                                <span class="cursor">|</span>
+                            </div>
+                        </div>
+                        
+                        <a href="assets/resume.pdf" class="resume-button" download><i class="fas fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <i class="fab fa-python skill-icon"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-brain skill-icon"></i>
+                    <span class="skill-name">Machine Learning</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-robot skill-icon"></i>
+                    <span class="skill-name">AI</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar skill-icon"></i>
+                    <span class="skill-name">Data Analysis</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline-section">
+            <h2><i class="fas fa-graduation-cap"></i> Education Timeline</h2>
+            <div class="education-timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Symbiosis Institute Of Technology, Pune</h3>
+                        <p>B.Tech in Artificial Intelligence and Machine Learning</p>
+                        <p>First Year Student</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Delhi Public School Vasant Kunj</h3>
+                        <p>Higher Secondary Education</p>
+                        <p>12th Grade</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="contact-content">
             <section class="contact-details">
-                <h2>Get in Touch</h2>
+                <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
                 <p>Feel free to reach out to me through any of the channels below:</p>
                 <ul>
-                    <li><strong>Phone:</strong> <a href="tel:+919068267190">+919068267190</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:vinayak.varshney.dev@gmail.com">vinayak.varshney.dev@gmail.com</a></li>
-                    <li><strong>Discord:</strong> vinayakftw</li>
+                    <li><strong><i class="fas fa-phone"></i> Phone:</strong> <a href="tel:+919068267190">+91 9068267190</a></li>
+                    <li><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:vinayak.varshney.dev@gmail.com">vinayak.varshney.dev@gmail.com</a></li>
+                    <li><strong><i class="fab fa-discord"></i> Discord:</strong> vinayakftw</li>
                 </ul>
             </section>
-        </main>
         </div>
-            </main>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/VinayakFTW" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Vinayak Varshney. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>

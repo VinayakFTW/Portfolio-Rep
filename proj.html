@@ -1,58 +1,199 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Projects | Vinayak Varshney</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-transition"></div>
+    
+    <div class="stars-container">
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 10%; left: 20%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 15%; left: 50%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 25%; left: 80%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 30%; left: 10%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 35%; left: 40%; opacity: 0.8; animation: star-float 4s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 40%; left: 70%; opacity: 0.8; animation: star-float 9s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 50%; left: 30%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 55%; left: 60%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate-reverse;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 60%; left: 90%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
+        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 65%; left: 15%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+    </div>
+    
     <header class="upper-navbar">
         <h1 class="name-index">Vinayak Varshney</h1>
         <nav>
             <div class="button-core">
                 <div class="button-container">
-                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="index.html">Home</a>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="index.html"><i class="fas fa-home"></i> <span>Home</span></a>
                     </button>
-                    <!-- <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="contact.html">Contact</a>
-                    </button> -->
-                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="about.html">About</a>
+                    <button class="link-buttons btn-grad">
+                        <a class="btn-text" href="about.html"><i class="fas fa-user"></i> <span>About</span></a>
                     </button>
                 </div>
             </div>
-         </nav>
-        <hr>
+        </nav>
     </header>
+    
     <main class="projects-content">
         <section class="projects-list-section">
-            <h2>My Projects</h2>
-            <p>Here are some of the projects I have worked on:</p>
+            <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
+            
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            
+            <div class="project-search">
+                <input type="text" id="project-search-input" placeholder="Search projects by name, description or technology...">
+            </div>
+            
             <div class="project-items-container">
-                <div class="project-item">
-                    <h3>PULSE.AI - Voice Assistant</h3>
-                    <p>A voice-controlled assistant built with Python.</p>
-                    <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant" class="btn-grad project-link" target="_blank">View on Github</a>
-                </div>
-                <div class="project-item">
-                    <h3>Basic Image Processing</h3>
-                    <p>Exploring fundamental image processing techniques using NumPy and Matplotlib.</p>
-                    <a href="https://github.com/VinayakFTW/Basic_Image_Proccessing-numpy_and_matplotlib" class="btn-grad project-link" target="_blank">View on Github</a>
-                </div>
-                <div class="project-item">
-                    <h3>CO2 Emission Prediction</h3>
-                    <p>Predicting CO2 emissions of various vehicles using regression.</p>
-                    <a href="https://github.com/VinayakFTW/CO2_Emission_Prediction" class="btn-grad project-link" target="_blank">View on Github</a>
-                </div>
-                <div class="project-item">
-                    <h3>Billing System</h3>
-                    <p>A simple Billing system made using C.</p>
-                    <a href="https://github.com/VinayakFTW/Billing_System" class="btn-grad project-link" target="_blank">View on Github</a>
+                <div class="project-item" data-category="ai">
+                    <div class="project-content">
+                        <h3><i class="fas fa-robot"></i> PULSE.AI - Voice Assistant</h3>
+                        <p>A voice-controlled assistant built with Python that can perform various tasks through voice commands. Features natural language processing capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Speech Recognition</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
+                        </div>
+                    </div>
                 </div>
                 
+                <div class="project-item" data-category="ai">
+                    <div class="project-content">
+                        <h3><i class="fas fa-image"></i> Basic Image Processing</h3>
+                        <p>Exploring fundamental image processing techniques using NumPy and Matplotlib. Includes filters, transformations, and analysis algorithms.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/VinayakFTW/Basic_Image_Proccessing-numpy_and_matplotlib" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="ai">
+                    <div class="project-content">
+                        <h3><i class="fas fa-chart-line"></i> CO2 Emission Prediction</h3>
+                        <p>Predicting CO2 emissions of various vehicles using machine learning regression techniques. Analyzes multiple factors affecting emissions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/VinayakFTW/CO2_Emission_Prediction" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="other">
+                    <div class="project-content">
+                        <h3><i class="fas fa-calculator"></i> Billing System</h3>
+                        <p>A simple yet efficient billing system implemented in C programming language. Features inventory management and receipt generation.</p>
+                        <div class="project-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Data Structures</span>
+                            <span class="tag">File Handling</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/VinayakFTW/Billing_System" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="web">
+                    <div class="project-content">
+                        <h3><i class="fas fa-laptop"></i> Portfolio Website</h3>
+                        <p>My personal portfolio website built with HTML, CSS, and JavaScript. Features responsive design and smooth animations.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i> You're here!</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/VinayakFTW" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Vinayak Varshney. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projects = document.querySelectorAll('.project-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    projects.forEach(project => {
+                        if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            const searchInput = document.getElementById('project-search-input');
+            
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                
+                projects.forEach(project => {
+                    const title = project.querySelector('h3').innerText.toLowerCase();
+                    const description = project.querySelector('p').innerText.toLowerCase();
+                    const tags = Array.from(project.querySelectorAll('.tag')).map(tag => tag.innerText.toLowerCase());
+                    
+                    const isVisible = title.includes(query) || description.includes(query) || tags.some(tag => tag.includes(query));
+                    project.style.display = isVisible ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
