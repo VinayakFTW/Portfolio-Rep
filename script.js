@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const texts = [
         "A student of Artificial Intelligence and Machine Learning",
-        "I am Currently a First Year in Symbiosis Institute Of Technology Pune pursuing my B.Tech",
+        "I am Currently a Second Year in Symbiosis Institute Of Technology Pune pursuing my B.Tech",
         "I did my 12th grade from Delhi Public School Vasant Kunj"
     ];
     
