@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Triggers: Interactive Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Tech -->
+    <!-- Application Structure Plan: The SPA uses a single-page, vertical scroll structure with a sticky top navigation for easy access to thematic sections. This is more user-friendly than a linear slide deck, allowing users to jump to topics of interest. The core of the application is an interactive explorer for 'Trigger Concepts', where users click buttons for events and timings to see dynamically generated explanations. This encourages active learning and exploration of combinations. Code examples are initially hidden behind 'Reveal Code' toggles to reduce cognitive load, focusing first on the problem ('Mission') and then the solution. This interactive, non-linear structure was chosen to make the technical content more engaging, digestible, and explorable for developers. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Trigger Events, Timings, OLD/NEW. -> Goal: Organize/Compare. -> Viz/Presentation: Interactive button grid updating a central display panel. -> Interaction: User clicks event/timing buttons to dynamically filter content. -> Justification: Actively demonstrates the relationships between trigger components, more effective than static text. -> Library/Method: Vanilla JS DOM manipulation.
+        - Report Info: Benefits (Superpowers) & Drawbacks (Kryptonite). -> Goal: Inform. -> Viz/Presentation: Thematic icon-driven cards in a responsive grid. -> Interaction: Static display. -> Justification: Icons and clear separation in cards make key takeaways scannable and memorable. -> Library/Method: HTML/Tailwind CSS.
+        - Report Info: Code Examples. -> Goal: Demonstrate. -> Viz/Presentation: Styled code blocks within 'Mission' cards. -> Interaction: A 'Reveal Code' button toggles the visibility of the code. -> Justification: Hides complexity initially, allowing users to understand the goal before seeing the implementation. -> Library/Method: Vanilla JS toggle.
+        - CONFIRMATION: NO Chart.js/Plotly.js used as the source material is conceptual, not quantitative.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5F2; /* Warm Neutral Background */
+            color: #334155; /* Slate Gray Text */
+        }
+        .accent-color { color: #147a75; } /* Muted Teal Accent */
+        .accent-bg { background-color: #147a75; }
+        .accent-bg-hover:hover { background-color: #116a65; }
+        .accent-border { border-color: #147a75; }
+        .secondary-bg { background-color: #FFFFFF; }
+        .btn-active {
+            background-color: #147a75 !important;
+            color: #FFFFFF !important;
+            border-color: #116a65 !important;
+        }
+        .code-block {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .transition-all-smooth {
+            transition: all 0.3s ease-in-out;
+        }
+        .section-intro {
+            max-width: 48rem; /* 768px */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: #475569; /* Slate 600 */
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold accent-color">
+                MySQL Triggers
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#concepts" class="text-slate-600 hover:accent-color transition-colors">Concepts</a>
+                <a href="#superpowers" class="text-slate-600 hover:accent-color transition-colors">Superpowers</a>
+                <a href="#examples" class="text-slate-600 hover:accent-color transition-colors">Examples</a>
+                <a href="#kryptonite" class="text-slate-600 hover:accent-color transition-colors">Warnings</a>
+            </div>
+            <div class="md:hidden">
+                 <button id="mobile-menu-button" class="text-slate-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#concepts" class="block py-2 px-6 text-sm text-slate-600 hover:accent-bg hover:text-white">Concepts</a>
+            <a href="#superpowers" class="block py-2 px-6 text-sm text-slate-600 hover:accent-bg hover:text-white">Superpowers</a>
+            <a href="#examples" class="block py-2 px-6 text-sm text-slate-600 hover:accent-bg hover:text-white">Examples</a>
+            <a href="#kryptonite" class="block py-2 px-6 text-sm text-slate-600 hover:accent-bg hover:text-white">Warnings</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">MySQL Triggers:</h1>
+                <h2 class="text-4xl md:text-6xl font-bold accent-color">Your Database's Secret Superheroes!</h2>
+                <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">A fun, interactive guide to understanding and automating your database with the power of triggers.</p>
+            </div>
+        </section>
+
+        <!-- What is a Trigger Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-slate-800">What in the World is a Trigger?</h2>
+                <p class="section-intro mt-4">At its core, a trigger is an automatic action. This section explains the concept using a simple real-world analogy to build your foundational understanding before we dive into the technical details.</p>
+                <div class="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-left p-6">
+                        <p class="text-lg text-slate-600">Imagine a motion-sensor light. Two simple things happen:</p>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <span class="text-2xl accent-color font-bold">1</span>
+                                <div>
+                                    <h3 class="font-semibold text-slate-800">The Event</h3>
+                                    <p class="text-slate-500">You walk into a dark room.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <span class="text-2xl accent-color font-bold">2</span>
+                                <div>
+                                    <h3 class="font-semibold text-slate-800">The Action</h3>
+                                    <p class="text-slate-500">The light automatically turns on.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-100 p-8 rounded-lg shadow-inner">
+                         <p class="text-xl font-semibold text-slate-800">A MySQL Trigger is just like that!</p>
+                         <p class="mt-2 text-slate-600">It's a special, stored procedure that <span class="font-bold accent-color">automatically</span> runs when a specific database event happens on a table.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concepts Section -->
+        <section id="concepts" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-slate-800 text-center">Explore the Core Concepts</h2>
+                <p class="section-intro mt-4">Triggers are defined by an event and a timing. Click the buttons below to mix and match the core components and see how they work together. This interactive explorer will help you understand the fundamental building blocks of any trigger.</p>
+
+                <div class="mt-12 max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-semibold text-slate-700 mb-3">1. Choose an Event:</h3>
+                            <div id="event-buttons" class="flex flex-wrap gap-2">
+                                <button data-type="event" data-value="INSERT" class="concept-btn border-2 border-slate-300 text-slate-700 px-4 py-2 rounded-md transition-all-smooth hover:border-slate-400">INSERT</button>
+                                <button data-type="event" data-value="UPDATE" class="concept-btn border-2 border-slate-300 text-slate-700 px-4 py-2 rounded-md transition-all-smooth hover:border-slate-400">UPDATE</button>
+                                <button data-type="event" data-value="DELETE" class="concept-btn border-2 border-slate-300 text-slate-700 px-4 py-2 rounded-md transition-all-smooth hover:border-slate-400">DELETE</button>
+                            </div>
+
+                            <h3 class="font-semibold text-slate-700 mt-6 mb-3">2. Choose a Timing:</h3>
+                            <div id="timing-buttons" class="flex flex-wrap gap-2">
+                                <button data-type="timing" data-value="BEFORE" class="concept-btn border-2 border-slate-300 text-slate-700 px-4 py-2 rounded-md transition-all-smooth hover:border-slate-400">BEFORE</button>
+                                <button data-type="timing" data-value="AFTER" class="concept-btn border-2 border-slate-300 text-slate-700 px-4 py-2 rounded-md transition-all-smooth hover:border-slate-400">AFTER</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-6 border">
+                            <h3 class="font-semibold text-slate-800">Your Trigger Combination:</h3>
+                            <div id="concept-display" class="mt-4 text-slate-600 space-y-3">
+                                <p>Select an event and a timing to see the details.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Superpowers Section -->
+        <section id="superpowers" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-slate-800 text-center">The Superpowers (Why Use Them?)</h2>
+                <p class="section-intro mt-4">Triggers aren't just a technical curiosity; they solve real-world problems. This section highlights the three main "superpowers" that triggers bring to your database, turning it from a simple data store into a smart, automated system.</p>
+
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="secondary-bg p-8 rounded-lg shadow-md text-center">
+                        <div class="text-4xl accent-color mb-4">🛡️</div>
+                        <h3 class="text-xl font-bold text-slate-800">Enforce Data Integrity</h3>
+                        <p class="mt-2 text-slate-600">Act as ultimate guardians, preventing bad data from ever entering your tables. For example, "No negative prices allowed!"</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="secondary-bg p-8 rounded-lg shadow-md text-center">
+                        <div class="text-4xl accent-color mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold text-slate-800">Automate Follow-up Actions</h3>
+                        <p class="mt-2 text-slate-600">Your trusty sidekicks, handling repetitive tasks. For example, "New user? Add them to the mailing list table automatically!"</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="secondary-bg p-8 rounded-lg shadow-md text-center">
+                        <div class="text-4xl accent-color mb-4">📸</div>
+                        <h3 class="text-xl font-bold text-slate-800">Create Audit Trails</h3>
+                        <p class="mt-2 text-slate-600">Like security cameras, logging every important change. For example, "Who changed the product price to $999?!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anatomy and Examples Section -->
+        <section id="examples" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-slate-800 text-center">Anatomy of a Superhero</h2>
+                <p class="section-intro mt-4">Now that you understand the concepts, let's look at the code. Here you'll find the basic syntax for creating a trigger, followed by two real-world "missions" that show you how to apply these powers in practice.</p>
+
+                <div class="mt-12 max-w-4xl mx-auto">
+                    <div class="code-block p-6 rounded-lg shadow-lg">
+CREATE TRIGGER trigger_name
+  {BEFORE | AFTER} {INSERT | UPDATE | DELETE}
+  ON table_name
+  FOR EACH ROW
+BEGIN
+  -- This is the secret action plan! --
+  -- Your SQL statements go here. --
+END;
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-slate-800 text-center mt-16 mb-8">Superhero Missions</h3>
+                    
+                    <!-- Mission 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h4 class="text-xl font-bold accent-color">Mission 1: The Price Guardian</h4>
+                        <p class="mt-2 text-slate-600">Your task is to prevent anyone from setting a negative price for a product. We'll use a `BEFORE UPDATE` trigger to inspect and fix the data before it's saved.</p>
+                        <button class="toggle-code mt-4 accent-bg accent-bg-hover text-white font-bold py-2 px-4 rounded transition-all-smooth" data-target="code-1">Reveal Code</button>
+                        <div id="code-1" class="hidden mt-4">
+                            <div class="code-block p-4 rounded-md">
+CREATE TRIGGER prevent_negative_price
+BEFORE UPDATE ON products
+FOR EACH ROW
+BEGIN
+    -- If the NEW price is less than zero...
+    IF NEW.price < 0 THEN
+        -- ...set the NEW price to zero instead!
+        SET NEW.price = 0;
+    END IF;
+END;
+                            </div>
+                             <p class="mt-4 font-semibold text-slate-700">Result: Your product prices are always safe and sound!</p>
+                        </div>
+                    </div>
+
+                    <!-- Mission 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold accent-color">Mission 2: The Super-Sleuth</h4>
+                        <p class="mt-2 text-slate-600">Your mission is to log every time an employee's salary is changed. We'll use an `AFTER UPDATE` trigger to create an audit trail after a change has been successfully made.</p>
+                        <button class="toggle-code mt-4 accent-bg accent-bg-hover text-white font-bold py-2 px-4 rounded transition-all-smooth" data-target="code-2">Reveal Code</button>
+                        <div id="code-2" class="hidden mt-4">
+                            <div class="code-block p-4 rounded-md">
+CREATE TRIGGER log_salary_change
+AFTER UPDATE ON employees
+FOR EACH ROW
+BEGIN
+    -- If the old salary is different from the new one...
+    IF OLD.salary &lt;&gt; NEW.salary THEN
+        -- ...insert a record into our spy log!
+        INSERT INTO salary_audits(employee_id, old_salary, new_salary, change_time)
+        VALUES(OLD.id, OLD.salary, NEW.salary, NOW());
+    END IF;
+END;
+                            </div>
+                            <p class="mt-4 font-semibold text-slate-700">Result: You have a perfect history of every single salary change!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kryptonite Section -->
+        <section id="kryptonite" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-slate-800 text-center">The Kryptonite! (Things to Watch Out For)</h2>
+                <p class="section-intro mt-4">Even superheroes have weaknesses. While powerful, triggers should be used with caution. This section covers the common pitfalls to help you use them wisely and avoid unexpected problems in your application.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <!-- Warning 1 -->
+                    <div class="bg-red-50 border-l-4 border-red-400 p-8 rounded-r-lg">
+                        <div class="text-3xl mb-4">🤫</div>
+                        <h3 class="text-xl font-bold text-red-800">Hidden Logic</h3>
+                        <p class="mt-2 text-red-700">Triggers work silently in the database, which can confuse developers who don't know they exist. Always document your triggers!</p>
+                    </div>
+                    <!-- Warning 2 -->
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-r-lg">
+                         <div class="text-3xl mb-4">🐢</div>
+                        <h3 class="text-xl font-bold text-yellow-800">Performance</h3>
+                        <p class="mt-2 text-yellow-700">A complex trigger on a busy table can slow things down. Keep them simple and efficient!</p>
+                    </div>
+                    <!-- Warning 3 -->
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-r-lg">
+                         <div class="text-3xl mb-4"> tangled_yarn </div>
+                        <h3 class="text-xl font-bold text-blue-800">The Domino Effect</h3>
+                        <p class="mt-2 text-blue-700">Triggers can call other triggers, which can become complicated and hard to debug. Be careful of cascading triggers!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-white">Go Forth and Automate!</h3>
+            <p class="mt-4 max-w-2xl mx-auto">You've learned what triggers are, their powers, how to build them, and their secret weaknesses. Now you're ready to use triggers to make your database smarter and more reliable.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                     mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Code Reveal Toggle
+            const codeToggles = document.querySelectorAll('.toggle-code');
+            codeToggles.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    const isHidden = targetElement.classList.contains('hidden');
+                    
+                    if (isHidden) {
+                        targetElement.classList.remove('hidden');
+                        button.textContent = 'Hide Code';
+                    } else {
+                        targetElement.classList.add('hidden');
+                        button.textContent = 'Reveal Code';
+                    }
+                });
+            });
+
+            // Interactive Concept Explorer
+            const conceptState = { event: null, timing: null };
+            const conceptDisplay = document.getElementById('concept-display');
+            const conceptButtons = document.querySelectorAll('.concept-btn');
+            
+            const conceptData = {
+                INSERT: {
+                    description: "A new hero (row) joins the team (table). This event happens when you add a new record.",
+                    BEFORE: {
+                        superpower: "Jumps into action *just before* the new data is saved. Can inspect and even *change* the data before it's final.",
+                        availability: "`NEW` data is available to be inspected or modified. `OLD` is not available."
+                    },
+                    AFTER: {
+                        superpower: "Gets to work *right after* the new data has been successfully saved. Perfect for follow-up actions.",
+                        availability: "`NEW` data is available (read-only). `OLD` is not available."
+                    }
+                },
+                UPDATE: {
+                    description: "A hero gets a new power or costume (a row is modified). This event happens when you change an existing record.",
+                    BEFORE: {
+                        superpower: "Acts *just before* an existing row is updated. Can validate the change or modify the incoming `NEW` data.",
+                        availability: "Both `OLD` (the data before the change) and `NEW` (the data after the change) are available."
+                    },
+                    AFTER: {
+                        superpower: "Acts *right after* a row has been successfully updated. Ideal for logging the change.",
+                        availability: "Both `OLD` (the data before the change) and `NEW` (the data after the change) are available (read-only)."
+                    }
+                },
+                DELETE: {
+                    description: "A hero retires from the team (a row is removed). This event happens when you delete a record.",
+                    BEFORE: {
+                        superpower: "Jumps in *just before* a row is deleted. Can be used to prevent deletion based on certain conditions.",
+                        availability: "`OLD` data (the row about to be deleted) is available. `NEW` is not available."
+                    },
+                    AFTER: {
+                        superpower: "Gets to work *right after* a row has been successfully deleted. Useful for creating an archive or log of deleted items.",
+                        availability: "`OLD` data (the row that was just deleted) is available (read-only). `NEW` is not available."
+                    }
+                }
+            };
+            
+            function updateConceptDisplay() {
+                const { event, timing } = conceptState;
+
+                if (!event || !timing) {
+                    conceptDisplay.innerHTML = `<p>Select an event and a timing to see the details.</p>`;
+                    return;
+                }
+                
+                const eventInfo = conceptData[event];
+                const timingInfo = eventInfo[timing];
+                
+                conceptDisplay.innerHTML = `
+                    <p class="font-semibold text-slate-800">Event: <span class="accent-color font-bold">${event}</span></p>
+                    <p>${eventInfo.description}</p>
+                    <hr class="my-3">
+                    <p class="font-semibold text-slate-800">Timing: <span class="accent-color font-bold">${timing}</span></p>
+                    <p>${timingInfo.superpower}</p>
+                    <hr class="my-3">
+                    <p class="font-semibold text-slate-800">Data Availability:</p>
+                    <p>${timingInfo.availability}</p>
+                `;
+            }
+
+            conceptButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const type = button.dataset.type;
+                    const value = button.dataset.value;
+
+                    conceptState[type] = value;
+                    
+                    // Update button styles
+                    document.querySelectorAll(`button[data-type="${type}"]`).forEach(btn => {
+                        btn.classList.remove('btn-active');
+                    });
+                    button.classList.add('btn-active');
+                    
+                    updateConceptDisplay();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
