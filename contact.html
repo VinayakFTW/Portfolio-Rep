@@ -1,62 +1,223 @@
-<!-- <html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Vinayak Varshney - AI/ML Engineer for engineering opportunities, agentic AI collaborations, or technical discussions.">
+  <title>Contact | Vinayak Varshney</title>
+  
+  <!-- Modern Font Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="upper-navbar">
-        <h1 class="name-index">Vinayak Varshney</h1>
-        <nav>
-            <div class="button-core">
-                <div class="button-container">
-                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="index.html">Home</a>
-                    </button>
+  <!-- Ambient Atmospheric Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
 
-                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="proj.html">Projects</a>
-                    </button>
+  <!-- Floating Glass Navbar -->
+  <header class="header-nav">
+    <div class="nav-pill">
+      <a href="index.html" class="brand">
+        <span>Vinayak Varshney</span>
+        <span class="brand-badge">AI/ML</span>
+      </a>
 
-                    <button class="link-buttons btn-grad" style="border: 2px ; border-radius: 30px">
-                        <a class = "btn-text" href="about.html">About</a>
-                    </button>
-                </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="proj.html" class="nav-link"><i class="fas fa-terminal"></i> Work & Projects</a>
+        <a href="about.html" class="nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+        <a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Open mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-nav-drawer">
+    <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="proj.html" class="mobile-nav-link"><i class="fas fa-terminal"></i> Work & Projects</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+    <a href="contact.html" class="mobile-nav-link active"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+
+  <main>
+    <div class="container">
+      <!-- HEADER -->
+      <section style="padding: 2.5rem 0 1.5rem;">
+        <span class="section-tag"><i class="fas fa-paper-plane"></i> Direct Connection</span>
+        <h1 class="section-heading">Let's Connect & Collaborate</h1>
+        <p class="section-lead">
+          Whether you have an exciting AI/ML role, an autonomous agent challenge, a research collaboration, or just want to discuss LLMs—send me a message below.
+        </p>
+      </section>
+
+      <!-- CONTACT CONTENT GRID -->
+      <div class="contact-grid">
+        <!-- Direct Channels -->
+        <div class="contact-channels">
+          <!-- Email Card -->
+          <div class="channel-card">
+            <div class="channel-info">
+              <div class="channel-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="channel-meta">
+                <h4>Email</h4>
+                <a href="mailto:vinayak.varshney.dev@gmail.com">vinayak.varshney.dev@gmail.com</a>
+              </div>
             </div>
-         </nav>
-        <hr>
-    </header>
-    <main class="contact-content">
-        <section class="contact-details">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out to me through any of the channels below:</p>
-            <ul>
-                <li><strong>Phone:</strong> <a href="tel:+919068267190">9068267190</a></li>
-                <li><strong>Email:</strong> <a href="mailto:vinayak.varshney20@gmail.com">vinayak.varshney20@gmail.com</a></li>
-                <li><strong>Discord:</strong> vinayakftw</li>
-            </ul>
-        </section>
-        
+            <button class="copy-btn copy-trigger" data-copy="vinayak.varshney.dev@gmail.com" title="Copy Email">
+              <i class="fas fa-copy"></i>
+              <span>Copy</span>
+            </button>
+          </div>
 
-        <section class="contact-form-section">
-            <h2>Send Me a Message</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-grad">Send Message</button>
-            </form>
-        </section>
-    </main>
+          <!-- Phone Card -->
+          <div class="channel-card">
+            <div class="channel-info">
+              <div class="channel-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="channel-meta">
+                <h4>Phone / WhatsApp</h4>
+                <a href="tel:+919068267190">+91 9068267190</a>
+              </div>
+            </div>
+            <button class="copy-btn copy-trigger" data-copy="+919068267190" title="Copy Phone Number">
+              <i class="fas fa-copy"></i>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <!-- Discord Card -->
+          <div class="channel-card">
+            <div class="channel-info">
+              <div class="channel-icon">
+                <i class="fab fa-discord"></i>
+              </div>
+              <div class="channel-meta">
+                <h4>Discord</h4>
+                <p>vinayakftw</p>
+              </div>
+            </div>
+            <button class="copy-btn copy-trigger" data-copy="vinayakftw" title="Copy Discord Tag">
+              <i class="fas fa-copy"></i>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="channel-card">
+            <div class="channel-info">
+              <div class="channel-icon">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div class="channel-meta">
+                <h4>Location</h4>
+                <p>Pune / Mumbai, Maharashtra, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links Strip -->
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank" class="btn btn-secondary" style="flex: 1;">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/VinayakFTW" target="_blank" class="btn btn-secondary" style="flex: 1;">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Direct Email Dispatch Form -->
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem; color: var(--text-primary);">Send Direct Message</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Delivered straight to <strong>vinayak.varshney.dev@gmail.com</strong> in real time.
+          </p>
+
+          <!-- Dynamic Status Alert (Success / Error) -->
+          <div id="form-status-banner" class="form-status-banner" role="alert"></div>
+
+          <form id="contact-form">
+            <!-- Anti-Spam Honeypot (Hidden from humans) -->
+            <input type="text" name="_honey" id="form-honey" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Rivera" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="e.g. AI Engineering Collaboration / Opportunity">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+              <span class="btn-text-content">Send Message</span>
+              <i class="fas fa-paper-plane" style="margin-left: 0.4rem;"></i>
+              <i class="fas fa-circle-notch fa-spin btn-spinner" style="display: none; margin-left: 0.5rem;"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          &copy; 2026 Vinayak Varshney. Designed with precision & passion.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:vinayak.varshney.dev@gmail.com" class="icon-link copy-trigger" data-copy="vinayak.varshney.dev@gmail.com" title="Copy Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank" class="icon-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
-</html> -->
+</html>

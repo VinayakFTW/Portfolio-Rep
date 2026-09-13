@@ -1,182 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinayak Varshney - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vinayak Varshney - AI/ML Engineer specializing in production-ready RAG pipelines, autonomous agents, and low-latency system architectures.">
+  <title>Vinayak Varshney | AI/ML Engineer</title>
+  
+  <!-- Modern Font Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-transition"></div>
-    
-    <div class="stars-container">
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 10%; left: 20%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 15%; left: 50%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 25%; left: 80%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 30%; left: 10%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 35%; left: 40%; opacity: 0.8; animation: star-float 4s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 40%; left: 70%; opacity: 0.8; animation: star-float 9s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 50%; left: 30%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 55%; left: 60%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 60%; left: 90%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 65%; left: 15%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+  <!-- Ambient Atmospheric Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
+
+  <!-- Floating Glass Navbar -->
+  <header class="header-nav">
+    <div class="nav-pill">
+      <a href="index.html" class="brand">
+        <span>Vinayak Varshney</span>
+        <span class="brand-badge">AI/ML</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+        <a href="proj.html" class="nav-link"><i class="fas fa-terminal"></i> Work & Projects</a>
+        <a href="about.html" class="nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Open mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-    
-    <header class="upper-navbar">
-        <h1 class="name-index">Vinayak Varshney</h1>
-        <nav>
-            <div class="button-core"> 
-                <div class="button-container">
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="#home"><i class="fas fa-home"></i> <span>Home</span></a>
-                    </button>
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="#skills"><i class="fas fa-laptop-code"></i> <span>Skills</span></a>
-                    </button>
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="#timeline"><i class="fas fa-graduation-cap"></i> <span>Education</span></a>
-                    </button>
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="proj.html"><i class="fas fa-code"></i> <span>Projects</span></a>
-                    </button>
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="about.html"><i class="fas fa-user"></i> <span>About</span></a>
-                    </button>
-                </div> 
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="home" class="home-content">
-            <div class="profile-section">
-                <img src="assets/images/me.jpg" alt="Vinayak Varshney" class="profile-image">
-                <div class="intro-text">
-                    <div id="intro">
-                        <h2>Hi, I am Vinayak Varshney</h2>
-                        <div class="intro-lines">
-                            <div class="typing-container">
-                                <span id="typing-text" class="typing-text"></span>
-                                <span class="cursor">|</span>
-                            </div>
-                        </div>
-                        
-                        <a href="assets/resume.pdf" class="resume-button" download><i class="fas fa-download"></i> Download Resume</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </header>
 
-        <section id="skills" class="skills-section">
-            <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <i class="fab fa-python skill-icon"></i>
-                    <span class="skill-name">Python</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-brain skill-icon"></i>
-                    <span class="skill-name">Machine Learning</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-robot skill-icon"></i>
-                    <span class="skill-name">AI</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <span class="skill-name">HTML</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <span class="skill-name">CSS</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js skill-icon"></i>
-                    <span class="skill-name">JavaScript</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database skill-icon"></i>
-                    <span class="skill-name">SQL</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-chart-bar skill-icon"></i>
-                    <span class="skill-name">Data Analysis</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-typescript-plain skill-icon"></i>
-                    <span class="skill-name">TypeScript</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-c-plain skill-icon"></i>
-                    <span class="skill-name">C</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-shield-alt skill-icon"></i>
-                    <span class="skill-name">Kali Linux(Red/Blue)</span>
-                </div>
-            </div>
-        </section>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-nav-drawer">
+    <a href="index.html" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a>
+    <a href="proj.html" class="mobile-nav-link"><i class="fas fa-terminal"></i> Work & Projects</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
 
-        <section id="timeline" class="timeline-section">
-            <h2><i class="fas fa-graduation-cap"></i> Education Timeline</h2>
-            <div class="education-timeline">
-                <div class="timeline-item current">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-date">2024 - Present</div>
-                    <div class="timeline-content">
-                        
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-date">2022 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Delhi Public School Vasant Kunj</h3>
-                        <p>Higher Secondary Education</p>
-                        <p>12th Grade</p>
-                    </div>
-                </div>
+  <main>
+    <div class="container">
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="pulse-dot"></span>
+              <span>Available for AI/ML Roles & Collaborations</span>
             </div>
-        </section>
-        
-        <div class="contact-content">
-            <section class="contact-details">
-                <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
-                <p>Feel free to reach out to me through any of the channels below:</p>
-                <ul>
-                    <li><strong><i class="fas fa-phone"></i> Phone:</strong> <a href="tel:+919068267190">+91 9068267190</a></li>
-                    <li><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:vinayak.varshney.dev@gmail.com">vinayak.varshney.dev@gmail.com</a></li>
-                    <li><strong><i class="fab fa-discord"></i> Discord:</strong> vinayakftw</li>
-                </ul>
-            </section>
+
+            <h1 class="hero-title">
+              Engineering <span class="text-gradient">Autonomous Agents</span> & Resilient RAG Pipelines
+            </h1>
+
+            <div class="role-typing-box">
+              <span class="typing-prefix">$</span>
+              <span id="typing-text" class="typing-target"></span>
+              <span class="typing-cursor">_</span>
+            </div>
+
+            <p class="hero-bio">
+              Hi, I'm <strong>Vinayak Varshney</strong>. I specialize in taking foundation models beyond prototypes into resilient, autonomous system workflows. From multi-agent orchestration and AST-indexed code retrieval to sub-200ms WebSocket voice streaming, I build production-ready intelligent systems.
+            </p>
+
+            <div class="hero-actions">
+              <a href="proj.html" class="btn btn-primary">
+                <span>Explore Work & Projects</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="assets/Vinayak_Varshney_resume.pdf" class="btn btn-secondary" target="_blank" download="Vinayak_Varshney_resume.pdf">
+                <i class="fas fa-file-arrow-down"></i>
+                <span>Download CV</span>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i>
+                <span>Get in Touch</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Apple-Style Framed Portrait Card -->
+          <div class="hero-visual">
+            <div class="portrait-frame">
+              <div class="portrait-img-wrap">
+                <img src="assets/images/me.jpg" alt="Vinayak Varshney - AI/ML Engineer" class="portrait-img">
+              </div>
+
+              <!-- Floating Context Badges -->
+              <div class="badge-float badge-stack">
+                <i class="fas fa-brain"></i>
+                <span>Agents & RAG</span>
+              </div>
+              <div class="badge-float badge-location">
+                <i class="fas fa-location-dot"></i>
+                <span>Pune / Mumbai, India</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-social">
-                <a href="https://github.com/VinayakFTW" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Vinayak Varshney. All Rights Reserved.
-            </div>
+      </section>
+
+      <!-- STATS & IMPACT BAR -->
+      <section class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number">4<span class="accent">+</span></div>
+          <div class="stat-label">AI & Engineering Roles</div>
         </div>
-    </footer>
-    
-    <button class="theme-toggle" aria-label="Toggle dark/light mode">
-        <i class="fas fa-moon"></i>
-    </button>
+        <div class="stat-item">
+          <div class="stat-number">&lt;200<span class="accent">ms</span></div>
+          <div class="stat-label">WebSocket Voice Latency</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">90<span class="accent">%</span></div>
+          <div class="stat-label">Autonomous Loop Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">~95<span class="accent">%</span></div>
+          <div class="stat-label">Speech Recognition Accuracy</div>
+        </div>
+      </section>
 
-    <button class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+      <!-- CORE SPECIALIZATION PILLARS (Bento Grid) -->
+      <section class="pillars-section">
+        <div class="section-header-centered">
+          <span class="section-tag"><i class="fas fa-layer-group"></i> Architecture Focus</span>
+          <h2 class="section-heading">Core Engineering Pillars</h2>
+          <p class="section-lead">
+            Bridging state-of-the-art machine learning models with high-throughput production infrastructure.
+          </p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="bento-grid-3">
+          <!-- Pillar 1 -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="bento-title">Autonomous Agents</h3>
+            <p class="bento-description">
+              Designing "Think-Act-Observe" agentic execution loops capable of terminal task decomposition, self-healing error handling, and complex multi-step reasoning.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">Agentic Loops</span>
+              <span class="tag">Tool Calling</span>
+              <span class="tag">Multi-Agent</span>
+              <span class="tag">Fallback Chains</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3 class="bento-title">Production RAG & Retrieval</h3>
+            <p class="bento-description">
+              Building hybrid retrieval pipelines utilizing AST code parsing, symbol indexing, dependency graphs, and vector databases (ChromaDB) for high-precision semantic lookup.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">Llama 3.1</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">AST Parsing</span>
+              <span class="tag">Vector Embeddings</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="bento-title">High-Perf Backend & MLOps</h3>
+            <p class="bento-description">
+              Deploying low-latency asynchronous APIs and streaming WebSockets with Fast-API, lightweight Hono.js microservices, Docker containerization, and automated CI/CD.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Hono.js</span>
+              <span class="tag">Docker</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED FLAGSHIP WORK SNEAK PEEK -->
+      <section class="featured-section">
+        <div class="section-header-centered">
+          <span class="section-tag"><i class="fas fa-star"></i> Flagship Systems</span>
+          <h2 class="section-heading">Featured Engineering Projects</h2>
+          <p class="section-lead">
+            Select highlighted projects demonstrating autonomous execution and retrieval-augmented systems.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Featured 1: Pulse AI -->
+          <div class="project-card" data-category="agents">
+            <div class="project-top">
+              <span class="project-category-badge">Autonomous Agent</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant" target="_blank" class="icon-link" title="GitHub Repo">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">Pulse AI — Terminal Agent</h3>
+              <p class="project-desc">
+                Constructed a hybrid AI agent to execute shell commands via natural language using an open-source model fallback chain. Implemented an autonomous "Think-Act-Observe" agentic loop to decompose terminal tasks with multimodal voice interaction.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-check-circle"></i>
+              <span>90% autonomous error-handling success rate</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Agentic Loop</span>
+              <span class="tag">Speech Recognition</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+
+          <!-- Featured 2: Code-Sentinel -->
+          <div class="project-card" data-category="rag">
+            <div class="project-top">
+              <span class="project-category-badge">RAG & Code QA</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub Repo">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">Code-Sentinel (AI Code Reviewer)</h3>
+              <p class="project-desc">
+                An AI engineering agent featuring an ingestion engine that uses AST parsing, symbol indexing, and dependency graphs to analyze complex codebases with ChromaDB vector embeddings.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-code-branch"></i>
+              <span>Automated QA, proactive code reviews & dynamic docs</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">AST Parsing</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Vector Embeddings</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <a href="proj.html" class="btn btn-secondary">
+            <span>View All Experience & Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          &copy; 2026 Vinayak Varshney. Designed with precision & passion.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:vinayak.varshney.dev@gmail.com" class="icon-link copy-trigger" data-copy="vinayak.varshney.dev@gmail.com" title="Copy Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank" class="icon-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>

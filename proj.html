@@ -1,214 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Vinayak Varshney</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience and Projects by Vinayak Varshney - AI/ML Engineer specializing in autonomous agents, RAG, and high-performance backend systems.">
+  <title>Experience & Projects | Vinayak Varshney</title>
+  
+  <!-- Modern Font Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-transition"></div>
-    
-    <div class="stars-container">
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 10%; left: 20%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 15%; left: 50%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 25%; left: 80%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 30%; left: 10%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 35%; left: 40%; opacity: 0.8; animation: star-float 4s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 40%; left: 70%; opacity: 0.8; animation: star-float 9s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 50%; left: 30%; opacity: 0.8; animation: star-float 7s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 55%; left: 60%; opacity: 0.8; animation: star-float 5s ease-in-out infinite alternate-reverse;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 60%; left: 90%; opacity: 0.8; animation: star-float 6s ease-in-out infinite alternate;"></div>
-        <div class="star" style="position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; box-shadow: 0 0 10px 3px #ffffff; top: 65%; left: 15%; opacity: 0.8; animation: star-float 8s ease-in-out infinite alternate-reverse;"></div>
+  <!-- Ambient Atmospheric Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
+
+  <!-- Floating Glass Navbar -->
+  <header class="header-nav">
+    <div class="nav-pill">
+      <a href="index.html" class="brand">
+        <span>Vinayak Varshney</span>
+        <span class="brand-badge">AI/ML</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="proj.html" class="nav-link active"><i class="fas fa-terminal"></i> Work & Projects</a>
+        <a href="about.html" class="nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Open mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-    
-    <header class="upper-navbar">
-        <h1 class="name-index">Vinayak Varshney</h1>
-        <nav>
-            <div class="button-core">
-                <div class="button-container">
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="index.html"><i class="fas fa-home"></i> <span>Home</span></a>
-                    </button>
-                    <button class="link-buttons btn-grad">
-                        <a class="btn-text" href="about.html"><i class="fas fa-user"></i> <span>About</span></a>
-                    </button>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-nav-drawer">
+    <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="proj.html" class="mobile-nav-link active"><i class="fas fa-terminal"></i> Work & Projects</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+
+  <main>
+    <div class="container">
+      <!-- HEADER BANNER -->
+      <section style="padding: 2.5rem 0 1rem;">
+        <span class="section-tag"><i class="fas fa-briefcase"></i> Track Record</span>
+        <h1 class="section-heading">Experience & Engineering Systems</h1>
+        <p class="section-lead">
+          A chronological journey through my professional engineering internships, research appointments, and production-grade AI projects.
+        </p>
+      </section>
+
+      <!-- 1. EXPERIENCE TIMELINE -->
+      <section>
+        <div class="experience-timeline">
+          <!-- Entry 1: Thoughtmatrix.ai -->
+          <div class="timeline-entry">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3>Automation and AI Intern</h3>
+                  <div class="company-name">
+                    <i class="fas fa-building"></i>
+                    <span>Thoughtmatrix.ai</span>
+                  </div>
                 </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">Aug 2026 — Present</span>
+                  <span class="timeline-location"><i class="fas fa-location-dot"></i> Pune, Maharashtra</span>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                  Specializing in deploying and scaling foundation models into resilient, automated system workflows and autonomous production pipelines.
+                </p>
+                <div class="tech-tags" style="margin-top: 1rem;">
+                  <span class="tag">Foundation Models</span>
+                  <span class="tag">Autonomous Agents</span>
+                  <span class="tag">MLOps</span>
+                  <span class="tag">Automation Pipelines</span>
+                </div>
+              </div>
             </div>
-        </nav>
-    </header>
-    
-    <main class="projects-content">
-        <section class="projects-list-section">
-            <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
-            
-            <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="web">Web Dev</button>
-                <button class="filter-btn" data-filter="other">Other</button>
+          </div>
+
+          <!-- Entry 2: Astrolekh -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3>Backend Developer Intern</h3>
+                  <div class="company-name">
+                    <i class="fas fa-server"></i>
+                    <span>Astrolekh</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">May 2026 — Jul 2026</span>
+                  <span class="timeline-location"><i class="fas fa-location-dot"></i> Mumbai, Maharashtra</span>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <ul>
+                  <li>Built lightweight, high-performance RESTful APIs in JavaScript leveraging the modern <strong>Hono.js</strong> framework.</li>
+                  <li>Implemented secure authentication and authorization middleware layers to protect sensitive application routes and user states.</li>
+                  <li>Developed modular CRUD endpoints optimized for efficient data retrieval, state mutation, and database synchronization.</li>
+                  <li>Structured robust request validation and strict error-handling pipelines to ensure API reliability and high data integrity.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Hono.js</span>
+                  <span class="tag">RESTful APIs</span>
+                  <span class="tag">Auth Middleware</span>
+                  <span class="tag">Data Pipelines</span>
+                </div>
+              </div>
             </div>
-            
-            <div class="project-search">
-                <input type="text" id="project-search-input" placeholder="Search projects by name, description or technology...">
+          </div>
+
+          <!-- Entry 3: SCAAI -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3>Research Intern (AI/ML)</h3>
+                  <div class="company-name">
+                    <i class="fas fa-microscope"></i>
+                    <span>Symbiosis Centre for Applied Artificial Intelligence (SCAAI)</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">Jul 2025 — 2026</span>
+                  <span class="timeline-location"><i class="fas fa-location-dot"></i> Pune, Maharashtra</span>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <ul>
+                  <li>Assisted in developing <strong>NyayaBot</strong>, a RAG-based legal chatbot to explain government schemes, utilizing <strong>Meta-Llama 3.1</strong> and <strong>ChromaDB</strong> to index and retrieve complex legal documents.</li>
+                  <li>Designed a real-time voice command feature with <strong>Fast-API WebSocket</strong> delivering <strong>&lt;200ms latency</strong>, ensuring seamless interaction between React frontend and Fast-API backend.</li>
+                  <li>Integrated Google Speech Recognition to transcribe live audio queries with <strong>~95% accuracy</strong>, streaming text directly into the chatbot query engine.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Meta-Llama 3.1</span>
+                  <span class="tag">ChromaDB</span>
+                  <span class="tag">Fast-API</span>
+                  <span class="tag">WebSockets</span>
+                  <span class="tag">Speech Recognition</span>
+                  <span class="tag">RAG</span>
+                </div>
+              </div>
             </div>
-            
-            <div class="project-items-container">
-                <div class="project-item" data-category="ai">
-                    <div class="project-content">
-                        <h3><i class="fas fa-robot"></i> PULSE.AI - Voice Assistant</h3>
-                        <p>A voice-controlled assistant built with Python that can perform various tasks through voice commands. Features natural language processing capabilities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Speech Recognition</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/VinayakFTW/PULSE.AI-voice_assistant" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
-                        </div>
-                    </div>
+          </div>
+
+          <!-- Entry 4: CodeXSIT -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3>Technical Head</h3>
+                  <div class="company-name">
+                    <i class="fas fa-users-gear"></i>
+                    <span>CodeXSIT</span>
+                  </div>
                 </div>
-                
-                <div class="project-item" data-category="ai">
-                    <div class="project-content">
-                        <h3><i class="fas fa-image"></i> Basic Image Processing</h3>
-                        <p>Exploring fundamental image processing techniques using NumPy and Matplotlib. Includes filters, transformations, and analysis algorithms.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">Matplotlib</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/VinayakFTW/Basic_Image_Proccessing-numpy_and_matplotlib" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
-                        </div>
-                    </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">Oct 2024 — Present</span>
+                  <span class="timeline-location"><i class="fas fa-location-dot"></i> Pune, Maharashtra</span>
                 </div>
-                
-                <div class="project-item" data-category="ai">
-                    <div class="project-content">
-                        <h3><i class="fas fa-chart-line"></i> CO2 Emission Prediction</h3>
-                        <p>Predicting CO2 emissions of various vehicles using machine learning regression techniques. Analyzes multiple factors affecting emissions.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Data Analysis</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/VinayakFTW/CO2_Emission_Prediction" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
-                        </div>
-                    </div>
+              </div>
+              <div class="timeline-body">
+                <ul>
+                  <li>Facilitated and led comprehensive technical workshops on <strong>Machine Learning</strong> (Supervised & Unsupervised) and <strong>Deep Learning</strong> (Neural Networks, LLMs, Agentic AI).</li>
+                  <li>Taught <strong>DevOps and MLOps</strong> workflows including Docker containerization, AWS, GitHub Actions CI/CD, and Cloudflare Workers & Pages.</li>
+                  <li>Organized flagship technical hackathons and competitions at Symbiosis Institute of Technology during Tech-Fest 2025 and 2026.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Technical Leadership</span>
+                  <span class="tag">Agentic AI Workshops</span>
+                  <span class="tag">Docker & AWS</span>
+                  <span class="tag">GitHub Actions</span>
                 </div>
-                
-                <div class="project-item" data-category="other">
-                    <div class="project-content">
-                        <h3><i class="fas fa-calculator"></i> Billing System</h3>
-                        <p>A simple yet efficient billing system implemented in C programming language. Features inventory management and receipt generation.</p>
-                        <div class="project-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">Data Structures</span>
-                            <span class="tag">File Handling</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/VinayakFTW/Billing_System" class="project-link" target="_blank"><i class="fab fa-github"></i> View on Github</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item" data-category="web">
-                    <div class="project-content">
-                        <h3><i class="fas fa-calculator"></i>Triggers</h3>
-                        <p>A simple yet efficient billing system implemented in C programming language. Features inventory management and receipt generation.</p>
-                        <div class="project-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">Data Structures</span>
-                            <span class="tag">File Handling</span>
-                        </div>
-                        <div class="project-footer">
-                        <button class="link-buttons btn-grad">
-                            <a class="btn-text" href="index2.html"><i class="fas fa-user"></i> <span>View</span></a>
-                        </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item" data-category="web">
-                    <div class="project-content">
-                        <h3><i class="fas fa-laptop"></i> Portfolio Website</h3>
-                        <p>My personal portfolio website built with HTML, CSS, and JavaScript. Features responsive design and smooth animations.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> You're here!</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-social">
-                <a href="https://github.com/VinayakFTW" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="copyright">
-                &copy; 2024 Vinayak Varshney. All Rights Reserved.
-            </div>
+          </div>
         </div>
-    </footer>
-    
-    <button class="theme-toggle" aria-label="Toggle dark/light mode">
-        <i class="fas fa-moon"></i>
-    </button>
+      </section>
 
-    <button class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+      <!-- 2. FLAGSHIP SYSTEMS SHOWCASE -->
+      <section style="margin-top: 5rem;">
+        <div class="section-header-centered">
+          <span class="section-tag"><i class="fas fa-code-commit"></i> Architecture Portfolio</span>
+          <h2 class="section-heading">Featured Engineering Systems</h2>
+          <p class="section-lead">
+            In-depth architectures spanning autonomous multi-agent loops, AST code intelligence, and real-time streaming interfaces.
+          </p>
+        </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const projects = document.querySelectorAll('.project-item');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.getAttribute('data-filter');
-                    
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    projects.forEach(project => {
-                        if (filter === 'all' || project.getAttribute('data-category') === filter) {
-                            project.style.display = 'block';
-                        } else {
-                            project.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            const searchInput = document.getElementById('project-search-input');
-            
-            searchInput.addEventListener('input', () => {
-                const query = searchInput.value.toLowerCase();
-                
-                projects.forEach(project => {
-                    const title = project.querySelector('h3').innerText.toLowerCase();
-                    const description = project.querySelector('p').innerText.toLowerCase();
-                    const tags = Array.from(project.querySelectorAll('.tag')).map(tag => tag.innerText.toLowerCase());
-                    
-                    const isVisible = title.includes(query) || description.includes(query) || tags.some(tag => tag.includes(query));
-                    project.style.display = isVisible ? 'block' : 'none';
-                });
-            });
-        });
-    </script>
+        <!-- Filter & Search Controls -->
+        <div class="projects-controls">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All Systems</button>
+            <button class="filter-btn" data-filter="agents">Agents</button>
+            <button class="filter-btn" data-filter="rag">RAG & Retrieval</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          </div>
 
-    <script src="script.js"></script>
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="project-search" class="search-input" placeholder="Search across systems & repositories...">
+          </div>
+        </div>
+
+        <!-- Grid of Flagship Project Cards -->
+        <div class="projects-grid">
+          <!-- Project 1: Pulse AI -->
+          <div class="project-card" data-category="agents">
+            <div class="project-top">
+              <span class="project-category-badge">Autonomous Agent</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW/pulse_cli" target="_blank" class="icon-link" title="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">Pulse AI — Terminal Agent</h3>
+              <p class="project-desc">
+                Constructed a hybrid AI agent to execute shell commands via natural language, using an open-source model fallback chain for complex multimodal reasoning. Implemented an autonomous "Think-Act-Observe" agentic loop to decompose terminal tasks with multimodal voice interaction and context-aware history management.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-chart-line"></i>
+              <span>90% autonomous error-handling success rate</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Agentic Loop</span>
+              <span class="tag">Think-Act-Observe</span>
+              <span class="tag">Speech Recognition</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+
+          <!-- Project 2: CodeSentinel -->
+          <div class="project-card" data-category="rag">
+            <div class="project-top">
+              <span class="project-category-badge">RAG & Code QA</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW/CodeSentinel" target="_blank" class="icon-link" title="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">CodeSentinel (AI Code Reviewer)</h3>
+              <p class="project-desc">
+                Developed an AI engineering agent featuring an ingestion engine that uses AST parsing, symbol indexing, and dependency graphs to analyze complex codebases. Built a hybrid retrieval pipeline using vector embeddings and ChromaDB to power automated codebase QA, proactive code reviews, and dynamic documentation.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-shield-halved"></i>
+              <span>AST Parsing + ChromaDB Hybrid Retrieval</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">AST Parsing</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Vector Embeddings</span>
+              <span class="tag">Dependency Graphs</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+
+          <!-- Project 3: SBISaarthi -->
+          <div class="project-card" data-category="agents">
+            <div class="project-top">
+              <span class="project-category-badge">Multi-Agent System</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW/SBISaarthi" target="_blank" class="icon-link" title="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">SBISaarthi — Multi-Agent Banking</h3>
+              <p class="project-desc">
+                Built a multi-agent financial assistance platform on WhatsApp to automate banking workflows, KYC processing, credit underwriting, and fraud risk assessment. Implemented a centralized orchestrator with an event bus to coordinate specialized AI task agents, paired with a dual-database architecture (PostgreSQL & MongoDB) and UIDAI/PAN verification state machines.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-layer-group"></i>
+              <span>Event Bus Orchestrator + Dual Database Architecture</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Multi-Agent</span>
+              <span class="tag">Event Bus</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">KYC / UIDAI</span>
+            </div>
+          </div>
+
+          <!-- Project 4: NyayaBot -->
+          <div class="project-card" data-category="rag">
+            <div class="project-top">
+              <span class="project-category-badge">RAG & Voice Stream</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub Profile">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">NyayaBot — Legal Scheme Assistant</h3>
+              <p class="project-desc">
+                RAG-based legal assistance chatbot developed at SCAAI to explain government schemes utilizing Meta-Llama 3.1 and ChromaDB document indexing. Engineered real-time bidirectional voice streaming over Fast-API WebSockets with sub-200ms latency and integrated Google Speech Recognition (~95% accuracy).
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-bolt"></i>
+              <span>&lt;200ms WebSocket Latency & ~95% Speech Accuracy</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Meta-Llama 3.1</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+
+          <!-- Project 5: Astrolekh REST APIs -->
+          <div class="project-card" data-category="backend">
+            <div class="project-top">
+              <span class="project-category-badge">High-Perf API</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub Profile">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">Hono.js Microservice Engine</h3>
+              <p class="project-desc">
+                High-performance backend API service designed with the modern Hono.js framework. Built robust authentication/authorization middleware, modular CRUD endpoints for state mutation and efficient database updates, and comprehensive request validation pipelines.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-server"></i>
+              <span>Zero-bloat edge-ready REST architecture</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Hono.js</span>
+              <span class="tag">RESTful API</span>
+              <span class="tag">Security Middleware</span>
+            </div>
+          </div>
+
+          <!-- Project 6: CO2 Emission Prediction -->
+          <div class="project-card" data-category="ml">
+            <div class="project-top">
+              <span class="project-category-badge">Machine Learning</span>
+              <div class="project-links">
+                <a href="https://github.com/VinayakFTW/CO2_Emission_Prediction" target="_blank" class="icon-link" title="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">CO2 Emission Prediction</h3>
+              <p class="project-desc">
+                Predicting automotive CO2 emissions through machine learning regression models. Involves exploratory data analysis, correlation heatmaps, feature engineering, and evaluating multi-variable regression pipelines to estimate carbon footprints.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-calculator"></i>
+              <span>Regression pipelines & feature importance analysis</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Data Analysis</span>
+            </div>
+          </div>
+
+          <!-- Project 7: MySQL Triggers Interactive Guide -->
+          <div class="project-card" data-category="backend">
+            <div class="project-top">
+              <span class="project-category-badge">Interactive Guide</span>
+              <div class="project-links">
+                <a href="index2.html" class="icon-link" title="Launch Interactive Guide">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="project-name">MySQL Triggers: Interactive Guide</h3>
+              <p class="project-desc">
+                An interactive web application exploring database automation, trigger events (INSERT, UPDATE, DELETE), timings (BEFORE/AFTER), and OLD/NEW state tracking with toggleable code missions and architectural tradeoffs.
+              </p>
+            </div>
+            <div class="project-metrics">
+              <i class="fas fa-database"></i>
+              <span>Full interactive visual explorer included</span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">Database Automation</span>
+              <span class="tag">Interactive UI</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. DYNAMIC GITHUB REPOSITORIES EXPLORER -->
+      <section class="github-repos-section">
+        <div class="section-header-centered">
+          <span class="section-tag"><i class="fab fa-github"></i> Real-Time Feed</span>
+          <h2 class="section-heading">Public Repositories & Open Source</h2>
+          <p class="section-lead">
+            Live repositories fetched dynamically from my GitHub profile (<strong>@VinayakFTW</strong>).
+          </p>
+        </div>
+
+        <!-- GitHub Profile Banner -->
+        <div class="github-profile-card">
+          <div class="github-profile-meta">
+            <div class="github-avatar-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div>
+              <div class="github-profile-title">VinayakFTW</div>
+              <div class="github-profile-sub">github.com/VinayakFTW</div>
+            </div>
+          </div>
+
+          <div class="github-stats-chips">
+            <div class="github-chip">
+              <i class="fas fa-code-branch"></i>
+              <span><strong id="github-repo-count">...</strong> Repositories</span>
+            </div>
+            <div class="github-chip">
+              <i class="fas fa-star" style="color: #fbbf24;"></i>
+              <span><strong id="github-stars-count">...</strong> Stars</span>
+            </div>
+            <a href="https://github.com/VinayakFTW?tab=repositories" target="_blank" class="btn btn-secondary btn-sm">
+              <span>View on GitHub</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Repository Language Filters -->
+        <div class="projects-controls" style="margin-bottom: 1.5rem;">
+          <div class="filter-group">
+            <button class="filter-btn repo-filter-btn active" data-lang="all">All Languages</button>
+            <button class="filter-btn repo-filter-btn" data-lang="python">Python</button>
+            <button class="filter-btn repo-filter-btn" data-lang="java">Java</button>
+            <button class="filter-btn repo-filter-btn" data-lang="c">C</button>
+            <button class="filter-btn repo-filter-btn" data-lang="jupyter notebook">Notebooks</button>
+            <button class="filter-btn repo-filter-btn" data-lang="html">Web</button>
+          </div>
+        </div>
+
+        <!-- Repositories Grid Container -->
+        <div id="github-repos-container" class="repos-grid">
+          <!-- Skeleton Shimmer Cards (Placeholder while live data loads) -->
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          &copy; 2026 Vinayak Varshney. Designed with precision & passion.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/VinayakFTW" target="_blank" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinayak-varshney-628991308/" target="_blank" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:vinayak.varshney.dev@gmail.com" class="icon-link copy-trigger" data-copy="vinayak.varshney.dev@gmail.com" title="Copy Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.instagram.com/.vinayakftw.?igsh=ajd1bDNydGRkM3I0&utm_source=qr" target="_blank" class="icon-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
